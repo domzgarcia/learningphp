@@ -1,7 +1,15 @@
 <?php 
 namespace Bluff\Directory\People;
+use Bluff\Directory\Helpers\CalculateGrade;
+use Bluff\Directory\Helpers\ConflictTrait;
 
 class Person {
+
+	use CalculateGrade, ConflictTrait {
+		CalculateGrade::same insteadof ConflictTrait;
+		ConflictTrait::same as thesame;
+	}
+
 	protected $firstname;
 	protected $surname;
 	public function __construct($firstname, $surname)
@@ -23,6 +31,10 @@ class Person {
 	public function __toString()
 	{
 		return $this->firstname . ' ' . $this->surname;
+	}
+	public function calcGradeAverage($args)
+	{
+		return $this->getAverage(...$args);
 	}
 }
 
