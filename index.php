@@ -1,30 +1,31 @@
 <?php 
-use Fake\Directory\Pet\Cat;
-use Fake\Directory\Pet\Dog;
-use Fake\Directory\Dups\DupDog;
+// Inheritance, Overriding, Abstract, Interfaces
+
+// use Bluff\Directory\People\Student;
+use Bluff\Directory\People\Junior;
+use Bluff\Directory\People\Student;
+use Bluff\Directory\People\Senior;
+use Bluff\Directory\People\Person;
 
 function autoloader($classname){
 	$lastSlash = strpos($classname,'\\') + 1;
 	$classname = substr($classname, $lastSlash);
 	$directory = str_replace('\\', '/', $classname);
-	$resolveDirectory = str_replace('Directory', '', $directory);
-	$filename  = __DIR__ . '' . $resolveDirectory . '.php';
-	require_once $filename;
+	$windowsResolver = str_replace('Directory', '', $directory);
+	$filename  = __DIR__ . '' . $windowsResolver . '.php';
+	require $filename;
 }
 spl_autoload_register('autoloader');
 
-$cat = new Cat();
-$cat->setSound('Meow');
-echo $cat->getSound() . ', ';
+# Inheritance
+// $student = new Student('Domz','Garcia');
+// echo $student->sayHi();
 
-$dog = new Dog();
-$dog->setSound('Awow');
-echo $dog->getSound() . ', ';
+# Abstract
+$junior = new Junior('Eman','Custorio');
+$senior = new Senior('Domz','Garcia');
+function level(Student $student){
+	return $student->getType() . ': ' . $student->getFirstname();
+}
+echo level($junior);
 
-$dupdog = new DupDog();
-$dupdog->setSound('Grrr');
-echo $dupdog->getSound();
-
-echo '<pre>', print_r($dog, 1);
-echo '<pre>', print_r($cat, 1);
-echo '<pre>', print_r($dupdog, 1);
