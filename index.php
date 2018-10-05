@@ -1,20 +1,25 @@
 <?php 
 use Fake\Directory\Pet\Cat;
 use Fake\Directory\Pet\Dog;
-use Fake\Directory\Dups\Dog as DupDog;
+use Fake\Directory\Dups\DupDog;
 
-require_once __DIR__ . '/Pet/Animal.php';
-require_once __DIR__ . '/Pet/Cat.php';
-require_once __DIR__ . '/Pet/Dog.php';
-require_once __DIR__ . '/Dups/DupDog.php';
+function autoloader($classname){
+	$lastSlash = strpos($classname,'\\') + 1;
+	$classname = substr($classname, $lastSlash);
+	$directory = str_replace('\\', '/', $classname);
+	$resolveDirectory = str_replace('Directory', '', $directory);
+	$filename  = __DIR__ . '' . $resolveDirectory . '.php';
+	require_once $filename;
+}
+spl_autoload_register('autoloader');
 
 $cat = new Cat();
 $cat->setSound('Meow');
-echo $cat->getSound() . ' ';
+echo $cat->getSound() . ', ';
 
 $dog = new Dog();
 $dog->setSound('Awow');
-echo $dog->getSound() . ' ';
+echo $dog->getSound() . ', ';
 
 $dupdog = new DupDog();
 $dupdog->setSound('Grrr');
