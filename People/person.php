@@ -2,6 +2,7 @@
 namespace Bluff\Directory\People;
 use Bluff\Directory\Helpers\CalculateGrade;
 use Bluff\Directory\Helpers\ConflictTrait;
+use Exception;
 
 class Person {
 
@@ -9,11 +10,10 @@ class Person {
 		CalculateGrade::same insteadof ConflictTrait;
 		ConflictTrait::same as thesame;
 	}
-
 	protected $firstname;
 	protected $surname;
 	public function __construct($firstname, $surname)
-	{
+	{	
 		$this->firstname = $firstname;
 		$this->surname = $surname;
 	}
