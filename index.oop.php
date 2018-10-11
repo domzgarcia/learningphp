@@ -40,18 +40,30 @@ function checkAverage(Student $student){
 # use conflict trait
 echo $leader->thesame();
 # debug
-eCho '<pre>' # , var_dump(level($leader)) 
+
+/*
+echo '<pre>' # , var_dump(level($leader)) 
 .'<br />' # ; echo checkAverage($leader) 
 . '%'
 .'<br />', print_r($leader, 1);
+*/
+
+# require 'imports/fileImported.php';
+# include 'imports/fileImported.php';
 
 
+
+
+
+
+# Reflection Class
+// https://www.youtube.com/watch?v=3uaPBYG4eeQ&list=PLfdtiltiRHWG0__5Jb1HDaDgt2PeYjvU6
 
 # Exceptions
 # ----------
-# https://www.udemy.com/php-oop-tutorial/learn/v4/t/lecture/9623818?start=0
-# https://sinonjs.org/
-# https://www.udemy.com/complete-object-oriented-programming-in-php-start-to-finish/learn/v4/t/lecture/4078764?start=0
-# https://www.udemy.com/draft/277868/learn/v4/t/lecture/2187164?start=0
-# Reflection Class
+// https://www.udemy.com/php-oop-tutorial/learn/v4/t/lecture/9623818?start=0
+// https://sinonjs.org/
+// https://www.udemy.com/complete-object-oriented-programming-in-php-start-to-finish/learn/v4/t/lecture/4078764?start=0
+// https://www.udemy.com/draft/277868/learn/v4/t/lecture/2187164?start=0
+// Reflection Class
 
