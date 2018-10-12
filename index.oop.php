@@ -56,14 +56,21 @@ echo '<pre>' # , var_dump(level($leader))
 
 
 
+# Exceptions
+# ----------
+// https://sinonjs.org/
+
+# OOP 1
+// https://www.udemy.com/php-oop-tutorial/learn/v4/t/lecture/9623818?start=0
+
+# OOP 2
+// https://www.udemy.com/complete-object-oriented-programming-in-php-start-to-finish/learn/v4/t/lecture/4078764?start=0
+
+# PHP BASICS
+// https://www.udemy.com/draft/277868/learn/v4/t/lecture/2187164?start=0
+
 # Reflection Class
 // https://www.youtube.com/watch?v=3uaPBYG4eeQ&list=PLfdtiltiRHWG0__5Jb1HDaDgt2PeYjvU6
 
-# Exceptions
-# ----------
-// https://www.udemy.com/php-oop-tutorial/learn/v4/t/lecture/9623818?start=0
-// https://sinonjs.org/
-// https://www.udemy.com/complete-object-oriented-programming-in-php-start-to-finish/learn/v4/t/lecture/4078764?start=0
-// https://www.udemy.com/draft/277868/learn/v4/t/lecture/2187164?start=0
-// Reflection Class
-
+# Work ka dito bukas
+# https://www.youtube.com/watch?v=e4v_Zd5axoU&index=33&list=PLfdtiltiRHWHjTPiFDRdTOPtSyYfz3iLW

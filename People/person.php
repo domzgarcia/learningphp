@@ -5,7 +5,6 @@ use Bluff\Directory\Helpers\ConflictTrait;
 use Exception;
 
 class Person {
-
 	use CalculateGrade, ConflictTrait {
 		CalculateGrade::same insteadof ConflictTrait;
 		ConflictTrait::same as thesame;
@@ -25,7 +24,8 @@ class Person {
 	{
 		return $this->surname;
 	}
-	public function sayHi(){
+	public function sayHi()
+	{
 		return 'Hi ' . $this->firstname . ' there! ' . __FUNCTION__ . '()';
 	}  
 	public function __toString()
