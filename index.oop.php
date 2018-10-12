@@ -66,8 +66,15 @@ echo '<pre>' # , var_dump(level($leader))
 # OOP 2
 // https://www.udemy.com/complete-object-oriented-programming-in-php-start-to-finish/learn/v4/t/lecture/4078764?start=0
 
-# PHP BASICS
+# PHP BASICS (INDIANO)
 // https://www.udemy.com/draft/277868/learn/v4/t/lecture/2187164?start=0
+// https://www.udemy.com/draft/277868/learn/v4/t/lecture/2187164?start=30
+
+# CODING WITH TABA
+// https://www.youtube.com/watch?v=8MksjpfDvRw
+
+# MYSQL
+# https://www.udemy.com/learn-database-design-with-mysql/learn/v4/t/lecture/981228?start=0
 
 # Reflection Class
 // https://www.youtube.com/watch?v=3uaPBYG4eeQ&list=PLfdtiltiRHWG0__5Jb1HDaDgt2PeYjvU6

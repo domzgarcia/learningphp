@@ -1,82 +1,38 @@
 <?php
 include 'Helpers/dumper.php';
-echo 'Hello World';
+include 'Helpers/directoryReader.php';
 
+$images = directoryReader('images');
+if(! $images){
+	die('Could not load files.');
+}
+// dd($images);
+?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# CSRF
-# https://www.youtube.com/watch?v=U4LDsxSzZeI
-# https://www.youtube.com/watch?v=GUYV0hbsDHE&list=PLfdtiltiRHWHjTPiFDRdTOPtSyYfz3iLW&index=24
-# https://youtu.be/w9z0b4GhhOs
-
-# functions
-// function add(){
-// 	$args = func_get_args();
-// 	dd($args);
-// }
-// add(1,2,'three');
-// add([1],[1,2],[1,2,3]);
-
-# function use can only work on assigned function
-// $suffix = 'Awesome';
-// $greet = function($fn, $ln) use ($suffix){
-// 	echo "{$fn} {$ln} {$suffix}";
-// };
-// echo $greet('domz','garcia');
-
-# continue;
-// $users = [
-// 	[
-// 		'username' => 'domz',
-// 		'likes' => ['code', 'game']
-// 	],
-// 	[
-// 		'username' => 'garcia',
-// 		'likes' => ['food', 'sports']
-// 	],
-// ];
-// foreach($users as $user){
-// 	foreach($user['likes'] as $activity){
-// 		if($activity === 'sports'){
-// 			continue;
-// 		}
-// 		echo $activity;
-// 	}
-// }
-
-# break;
-// $items = [
-// 	['key' => 1],
-// 	['key' => 2]
-// ];
-// foreach( $items as $item){
-// 	if($item['key'] === 1){
-// 		echo 'Blah';
-// 		break;
-// 	}
-// }
-
-# while()
-// $numberIwant = 4;
-// while( ($diceRoll = rand(1,6) ) !== $numberIwant ){
-// 	echo "You rolled a {$diceRoll}, we need a {$numberIwant} \n";
-// }
-// echo "Finally, we got {$diceRoll}, we need a {$numberIwant} \n";
-
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetch Local files</title>
+	<style type="text/css">
+		.wrapper {
+			width: 100px;
+			height: 100px;
+		}
+		.wrapper img {
+			max-width: 100px;
+			max-height:100px;	
+			width: 90%;
+			height: 90%;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<?php foreach ($images as $value) : ?>
+			<li class="wrapper">
+				<img src="<?= $value ?>">
+			</li>
+		<?php endforeach ?>
+	</ul>
+</body>
+</html>
