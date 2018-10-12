@@ -1,3 +1,71 @@
 Access Controls
 Methods
 Magic methods predefined methods
+Control Panel\User Accounts\Credential Manager
+
+self; // for setting static values
+in non static functions
+
+array_key_exists($key, $this->items)
+print_r
+implode, use in array to print
+func_get_args
+func_num_args
+spl_autoload_register
+htmlspecialchars
+ucwords
+is_int();
+var_dump();
+strtoupper
+static::blah
+count([] || class)
+psr-4 autoloading
+__FUNCTION__
+__DIR__
+insteadof
+as
+Exception
+reflectionClass
+call_user_func(array($editor, 'getEditorName'))
+rand(1,6);
+foreach($list as $index => $item) use index when no key
+foreach($list as $key => $item)
+$_SERVER['REQUEST_METHOD'] === 'POST';
+generate string = 
+bin2hex(openssl_random_pseudo_bytes(16)); // 16 length
+base64_encode(openssl_random_psuedo_bytes(32));
+$_SESSION['_token'] = string;
+die(/*can pass data here*/);
+isset($_POST['x'], $_POST['y'])
+unset($_SESSION['_token']);
+$_SESSION['key'] = bin2hex(random_bytes(32));
+$csrf = hash_mac('sha256','some string', $_SESSION['key']);
+hash_equals($csrf,$_POST['csrf'])
+fetch_array();
+password_hash
+password_verify
+trim
+rtrim
+ltrim
+strlen
+substr  
+empty
+header();exit(); // http headers example: header('Location: page.php');
+number_format($number,2);
+is_numeric
+get_funct_args
+static_member
+call_user_func
+
+# random
+	$qoute = $quotes[rand(0,count($qoutes)-1)];
+OR	$qoute = $qoutes[array_rand($qoutes)];
+
+opendir
+readdir
+
+# scope variable 3 ways
+global $config; // use global keyword
+function greet($fname,$lname,$config){} // params
+function greet($fname,$lname) use ($config, $other...){} // use keyword
+
